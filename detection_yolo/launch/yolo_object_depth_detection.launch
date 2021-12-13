@@ -4,8 +4,7 @@
     <include file="$(find detection_yolo)/launch/yolo_object_detection.launch"/>
 
     <!-- Object bounding boxes to cuboid detections --> 
-    <node pkg="detection_yolo" type="bounding_box_to_cuboid.py" name="bounding_box_to_cuboid" output="screen">
-        <rosparam file="$(find detection_yolo)/config/bounding_box_to_cuboid_params.yaml" command="load" />
-    </node>
+    <node pkg="detection_yolo" type="bounding_box_to_cuboid.py" name="bounding_box_to_cuboid" output="screen" />
+    <rosparam file="$(find detection_yolo)/config/bounding_box_to_cuboid_params.yaml" command="load" />
 
   </launch>
